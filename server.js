@@ -52,6 +52,13 @@ app.get('/bad', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Personal projects page',
+        welcomeMessage: 'Hi and welcome to Dan Aronson projects on github'
+    });
+});
+
 app.listen(port, () => {
     console.log(`Node is up and running on port ${port}`);
 });
